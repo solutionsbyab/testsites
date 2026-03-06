@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Adam Harris</title>
+  <meta name="description" content="Adam Harris — Official landing page. Music, videos, socials." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="/">
+        <img class="brand-logo" src="assets/logo/logo_main.png" alt="itsadamharris logo" />
+      </a>
+
+      <nav class="nav">
+        <a href="#video">Wavelength</a>
+        <a href="#follow">Follow</a>
+        <a href="#listen">Listen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 class="artist">Adam Harris</h1>
+          <p class="sub">UK Pop artist from Leicester. WAVELENGTH out now</p>
+
+          <div class="cta">
+            <!-- ✅ PUT YOUR LINKS HERE -->
+            <a class="btn primary" href="https://open.spotify.com/track/7Iv7xDYTmo4pIKKQ3BE5nv?si=_fCrf24KQ0WEPfuBhOlpmg" target="_blank" rel="noopener">Listen on Spotify</a>
+            <a class="btn" href="https://music.apple.com/gb/artist/adam-harris/1852372303" target="_blank" rel="noopener">Apple Music</a>
+          </div>
+
+          <div class="quicklinks">
+            <!-- ✅ PUT YOUR LINKS HERE -->
+            <a href="https://www.instagram.com/its.adamharris" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.tiktok.com/@itsadamharris" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://www.youtube.com/@itsadamharris" target="_blank" rel="noopener">YouTube</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <!-- ✅ CHANGE IMAGE PATH IF YOUR HERO PIC NAME IS DIFFERENT -->
+          <img class="hero-img" src="assets/photos/hero.png" alt="itsadamharris promo" />
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="video" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Wavelength OUT NOW</h2>
+          <p>Watch here now !</p>
+        </div>
+
+        <div class="video-wrap">
+          <!-- ✅ PUT YOUR YOUTUBE EMBED ID HERE -->
+          <iframe
+            src="https://www.youtube.com/embed/eNIDrFiqlBc"
+            title="itsadamharris - Official Video"
+            frameborder="0"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOLLOW -->
+    <section id="follow" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Follow</h2>
+          <p>Stay locked in my people </p>
+        </div>
+
+        <div class="cards">
+          <!-- ✅ PUT YOUR LINKS HERE -->
+          <a class="card" href="https://www.tiktok.com/@itsadamharris" target="_blank" rel="noopener">
+            <div class="card-title">TikTok</div>
+            <div class="card-sub">Short clips, previews and lives</div>
+          </a>
+
+          <a class="card" href="https://www.instagram.com/its.adamharris" target="_blank" rel="noopener">
+            <div class="card-title">Instagram</div>
+            <div class="card-sub">Behind the scenes</div>
+          </a>
+
+          <a class="card" href="https://www.youtube.com/@itsadamharris" target="_blank" rel="noopener">
+            <div class="card-title">YouTube</div>
+            <div class="card-sub">Official videos</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LISTEN -->
+    <section id="listen" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Listen</h2>
+          <p>Stream on your platform of choice.</p>
+        </div>
+
+        <div class="listen-row">
+          <!-- ✅ PUT YOUR LINKS HERE -->
+          <a class="pill" href="https://open.spotify.com/artist/0UfxZqpIdQ5MnFedukGl5V?si=Gog9pSkiT4qMNdcw5nuZ2g" target="_blank" rel="noopener">Spotify</a>
+          <a class="pill" href="https://music.apple.com/gb/artist/adam-harris/1852372303" target="_blank" rel="noopener">Apple Music</a>
+          <a class="pill" href="https://open.spotify.com/track/7Iv7xDYTmo4pIKKQ3BE5nv?si=_fCrf24KQ0WEPfuBhOlpmg" target="_blank" rel="noopener">WAVELENGTH</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> itsadamharris</div>
+      <!-- optional: email later -->
+      <div class="footer-links">
+        <a href="https://www.instagram.com/its.adamharris" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@itsadamharris" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.youtube.com/@itsadamharris" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
