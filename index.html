@@ -1,0 +1,1276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solutions by AB - Operational Systems Built for Scale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body class="min-h-screen">
+    <!-- Navigation -->
+    <nav 
+    id="nav"
+      class="fixed top-0 left-0 right-0 border-b"
+      style="
+        border-color: rgba(37, 44, 55, 0.5);
+        background: rgba(11, 14, 20, 0.8);
+        backdrop-filter: blur(12px);
+        z-index: 50;
+      "
+    >
+      <div
+        class="w-full flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 mx-auto"
+        style="max-width: 1280px"
+      >
+        <a href="#nav" class="shrink-0">
+          <div class="flex flex-col">
+            <span class="text-xl font-bold" style="color: rgb(224, 230, 235)"
+              >Solutions by <span class="text-gradient">
+
+                <img
+                  src="./images/logo.png"
+                  alt="AB Logo"
+                  class="inline-block h-[30px] w-[34px] -mt-1"/>
+              </span></span
+            >
+            <span class="text-[12px] font-bold text-gradient" style="color: rgb(224, 230, 235)"
+              >Technology. Tailored</span></span
+            >
+          </div>
+        </a>
+
+        <div class="hidden md:flex items-center gap-6">
+          <a
+            href="#services"
+            class="nav-link text-sm transition-colors hover:text-white"
+            style="color: rgb(123, 137, 157)"
+            >Services</a
+          >
+          <a
+            href="#deployments"
+            class="nav-link text-sm transition-colors hover:text-white"
+            style="color: rgb(123, 137, 157)"
+            >Deployments</a
+          >
+          <a
+            href="#framework"
+            class="nav-link text-sm transition-colors hover:text-white"
+            style="color: rgb(123, 137, 157)"
+            >Framework</a
+          >
+          <a
+            href="#contact"
+            class="nav-link text-sm transition-colors hover:text-white"
+            style="color: rgb(123, 137, 157)"
+            >Contact</a
+          >
+          <a
+            href="#contact"
+            class="inline-flex h-9 items-center rounded-lg px-5 text-sm font-medium glow-box"
+            style="background: rgb(51, 204, 153); color: rgb(11, 14, 20)"
+          >
+            Get in Touch
+          </a>
+        </div>
+
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden flex h-10 w-10 items-center justify-center rounded-lg border z-50"
+          style="
+            border-color: rgb(37, 44, 55);
+            color: rgb(224, 230, 235);
+            position: relative;
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-5 w-5"
+          >
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <div
+        class="px-4 py-6 flex flex-col gap-4 mx-auto"
+        style="max-width: 1280px"
+      >
+        <a
+          href="#services"
+          class="text-base transition-colors hover:text-emerald-400"
+          style="color: rgb(224, 230, 235)"
+          >Services</a
+        >
+        <a
+          href="#deployments"
+          class="text-base transition-colors hover:text-emerald-400"
+          style="color: rgb(224, 230, 235)"
+          >Deployments</a
+        >
+        <a
+          href="#framework"
+          class="text-base transition-colors hover:text-emerald-400"
+          style="color: rgb(224, 230, 235)"
+          >Framework</a
+        >
+        <a
+          href="#contact"
+          class="text-base transition-colors hover:text-emerald-400"
+          style="color: rgb(224, 230, 235)"
+          >Contact</a
+        >
+        <a
+          href="#contact"
+          class="inline-flex h-10 items-center justify-center rounded-lg px-5 text-sm font-medium glow-box mt-2"
+          style="background: rgb(51, 204, 153); color: rgb(11, 14, 20)"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative flex min-h-screen items-center pt-16">
+      <div class="absolute inset-0" style="opacity: 0.03">
+        <div
+          style="
+            background-image:
+              linear-gradient(rgb(224, 230, 235) 1px, transparent 1px),
+              linear-gradient(90deg, rgb(224, 230, 235) 1px, transparent 1px);
+            background-size: 60px 60px;
+            background-repeat: round;
+            background-position: 0 0;
+            width: 100%;
+            height: 100%;
+          "
+        ></div>
+      </div>
+      <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full blur-[120px] pointer-events-none"
+        style="background: rgba(51, 204, 153, 0.05)"
+      ></div>
+
+      <div
+        class="container relative mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32"
+        style="max-width: 1280px"
+      >
+        <div class="mx-auto max-w-3xl text-center">
+          <div
+            class="mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-1.5"
+            style="
+              border-color: rgb(37, 44, 55);
+              background: rgba(29, 34, 43, 0.5);
+            "
+          >
+            <span
+              class="h-2 w-2 rounded-full"
+              style="background: rgb(51, 204, 153)"
+            ></span>
+            <span
+              class="text-xs font-medium tracking-wide"
+              style="color: rgb(123, 137, 157)"
+              >Systems • Workflows • Automation</span
+            >
+          </div>
+
+          <h1
+            class="font-heading text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl leading-tight"
+            style="color: rgb(224, 230, 235)"
+          >
+            <span id="typewriter-wrap">
+              <span id="typewriter-measure" aria-hidden="true">Manual Processes Slow You Down. We Automate Them.</span>
+              <span id="typewriter" aria-hidden="false"></span>
+              <span id="typewriter-cursor" aria-hidden="true"></span>
+            </span>
+          </h1>
+
+          <p
+            class="mx-auto mt-5 max-w-xl text-sm sm:text-base lg:text-lg leading-relaxed"
+            style="color: rgb(123, 137, 157)"
+          >
+            We build the systems that replace your bottlenecks — automation, AI agents, and technical infrastructure that actually works while you sleep.
+          </p>
+
+          <div class="mt-6 flex flex-wrap items-center justify-center gap-2">
+            <span
+              class="rounded-full border px-3 py-1 text-xs font-medium"
+              style="
+                border-color: rgb(37, 44, 55);
+                background: rgba(29, 34, 43, 0.5);
+                color: rgb(123, 137, 157);
+              "
+              >Systems</span
+            >
+            <span
+              class="rounded-full border px-3 py-1 text-xs font-medium"
+              style="
+                border-color: rgb(37, 44, 55);
+                background: rgba(29, 34, 43, 0.5);
+                color: rgb(123, 137, 157);
+              "
+              >Infrastructure</span
+            >
+            <span
+              class="rounded-full border px-3 py-1 text-xs font-medium"
+              style="
+                border-color: rgb(37, 44, 55);
+                background: rgba(29, 34, 43, 0.5);
+                color: rgb(123, 137, 157);
+              "
+              >Automation</span
+            >
+            <span
+              class="rounded-full border px-3 py-1 text-xs font-medium"
+              style="
+                border-color: rgb(37, 44, 55);
+                background: rgba(29, 34, 43, 0.5);
+                color: rgb(123, 137, 157);
+              "
+              >Integration</span
+            >
+          </div>
+
+          <div
+            class="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
+          >
+            <a
+              href="#contact"
+              class="inline-flex items-center justify-center gap-2 h-12 rounded-lg px-8 text-base font-medium glow-box w-full sm:w-auto"
+              style="background: rgb(51, 204, 153); color: rgb(11, 14, 20)"
+            >
+              Request a Consultation
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+            <a
+              href="#services"
+              class="inline-flex items-center justify-center gap-2 h-12 rounded-lg px-8 text-base font-medium border transition-all hover:border-emerald-500 w-full sm:w-auto"
+              style="
+                border-color: rgba(123, 137, 157, 0.3);
+                color: rgb(224, 230, 235);
+                background: transparent;
+              "
+            >
+              View Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section
+      id="services"
+      class="py-16 sm:py-24 lg:py-28 border-t"
+      style="border-color: rgba(37, 44, 55, 0.5)"
+    >
+      <div
+        class="container mx-auto px-4 sm:px-6 lg:px-8"
+        style="max-width: 1280px"
+      >
+        <p
+          class="text-xs font-medium uppercase tracking-widest mb-3"
+          style="color: rgb(51, 204, 153)"
+        >
+          What We Build
+        </p>
+        <h2
+          class="font-heading text-2xl font-bold sm:text-3xl lg:text-4xl"
+          style="color: rgb(224, 230, 235)"
+        >
+          System <span class="text-gradient">Architecture</span>
+        </h2>
+
+        <div class="mt-10 sm:mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="glass-card rounded-xl p-5 sm:p-6 flex flex-col">
+            <span
+              class="inline-block self-start rounded-full border px-3 py-0.5 text-xs font-medium"
+              style="
+                border-color: rgba(51, 204, 153, 0.3);
+                background: rgba(51, 204, 153, 0.1);
+                color: rgb(51, 204, 153);
+              "
+              >AI Layer</span
+            >
+            <h3
+              class="mt-4 font-heading text-base sm:text-lg font-semibold"
+              style="color: rgb(224, 230, 235)"
+            >
+              Agentic AI Creation & Deployment
+            </h3>
+            <p
+              class="mt-2 text-sm leading-relaxed flex-1"
+              style="color: rgb(123, 137, 157)"
+            >
+              Design and deploy autonomous AI systems that can reason, act, and
+              integrate across your operational infrastructure — from internal
+              automation agents to decision-support workflows.
+            </p>
+            <a
+              href="#contact"
+              class="mt-5 inline-flex items-center gap-1 text-sm font-medium"
+              style="color: rgb(51, 204, 153)"
+            >
+              Enquire
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-3.5 w-3.5"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="glass-card rounded-xl p-5 sm:p-6 flex flex-col">
+            <span
+              class="inline-block self-start rounded-full border px-3 py-0.5 text-xs font-medium"
+              style="
+                border-color: rgba(51, 204, 153, 0.3);
+                background: rgba(51, 204, 153, 0.1);
+                color: rgb(51, 204, 153);
+              "
+              >Process Layer</span
+            >
+            <h3
+              class="mt-4 font-heading text-base sm:text-lg font-semibold"
+              style="color: rgb(224, 230, 235)"
+            >
+              Workflow & Automation Systems
+            </h3>
+            <p
+              class="mt-2 text-sm leading-relaxed flex-1"
+              style="color: rgb(123, 137, 157)"
+            >
+              CRM pipelines → automation logic → reporting dashboards.
+            </p>
+            <a
+              href="#contact"
+              class="mt-5 inline-flex items-center gap-1 text-sm font-medium"
+              style="color: rgb(51, 204, 153)"
+            >
+              Enquire
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-3.5 w-3.5"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="glass-card rounded-xl p-5 sm:p-6 flex flex-col">
+            <span
+              class="inline-block self-start rounded-full border px-3 py-0.5 text-xs font-medium"
+              style="
+                border-color: rgba(51, 204, 153, 0.3);
+                background: rgba(51, 204, 153, 0.1);
+                color: rgb(51, 204, 153);
+              "
+              >Foundation Layer</span
+            >
+            <h3
+              class="mt-4 font-heading text-base sm:text-lg font-semibold"
+              style="color: rgb(224, 230, 235)"
+            >
+              Digital Infrastructure Setup
+            </h3>
+            <p
+              class="mt-2 text-sm leading-relaxed flex-1"
+              style="color: rgb(123, 137, 157)"
+            >
+              Website architecture, domain configuration, secure email systems,
+              baseline technical stack.
+            </p>
+            <a
+              href="#contact"
+              class="mt-5 inline-flex items-center gap-1 text-sm font-medium"
+              style="color: rgb(51, 204, 153)"
+            >
+              Enquire
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-3.5 w-3.5"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="glass-card rounded-xl p-5 sm:p-6 flex flex-col">
+            <span
+              class="inline-block self-start rounded-full border px-3 py-0.5 text-xs font-medium"
+              style="
+                border-color: rgba(51, 204, 153, 0.3);
+                background: rgba(51, 204, 153, 0.1);
+                color: rgb(51, 204, 153);
+              "
+              >Integration Layer</span
+            >
+            <h3
+              class="mt-4 font-heading text-base sm:text-lg font-semibold"
+              style="color: rgb(224, 230, 235)"
+            >
+              Custom Technical Solutions
+            </h3>
+            <p
+              class="mt-2 text-sm leading-relaxed flex-1"
+              style="color: rgb(123, 137, 157)"
+            >
+              Bespoke internal tools, API integrations, system consolidation.
+            </p>
+            <a
+              href="#contact"
+              class="mt-5 inline-flex items-center gap-1 text-sm font-medium"
+              style="color: rgb(51, 204, 153)"
+            >
+              Enquire
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-3.5 w-3.5"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deployments Section - NEW MODERN DESIGN -->
+    <section
+      id="deployments"
+      class="py-16 sm:py-24 lg:py-28 border-t"
+      style="border-color: rgba(37, 44, 55, 0.5)"
+    >
+      <div
+        class="container mx-auto px-4 sm:px-6 lg:px-8"
+        style="max-width: 1280px"
+      >
+        <p
+          class="text-xs font-medium uppercase tracking-widest mb-3"
+          style="color: rgb(51, 204, 153)"
+        >
+          Our Work
+        </p>
+        <h2
+          class="font-heading text-2xl font-bold sm:text-3xl lg:text-4xl"
+          style="color: rgb(224, 230, 235)"
+        >
+          Delivery <span class="text-gradient">Snapshot</span>
+        </h2>
+
+        <div class="mt-10 sm:mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Card 1: Delivered/Live -->
+          <div class="glass-card rounded-xl deployment">
+            <div class="deployment-card-header">
+              <div class="deployment-dots">
+                <span class="deployment-dot green"></span>
+                <span class="deployment-dot yellow"></span>
+                <span class="deployment-dot blue"></span>
+              </div>
+              <span class="deployment-status">DELIVERED</span>
+            </div>
+
+            <div class="deployment-badge live">
+              <span class="deployment-badge-icon">🟢</span>
+              <span class="deployment-badge-text live">LIVE</span>
+            </div>
+
+            <div class="deployment-content">
+              <h3 class="deployment-title font-heading">
+                itsadamharris.com — Full Launch Pack
+              </h3>
+              <p class="deployment-description">
+                Website + EPK + domain email + industry-ready embeds & links.
+              </p>
+
+              <div class="deployment-buttons">
+                <a
+                  href="https://itsadamharris.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-2 h-10 rounded-lg px-8 text-base font-medium glow-box w-full sm:w-auto"
+                  style="background: rgb(51, 204, 153); color: rgb(11, 14, 20)"
+                >
+                  Open project
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="h-4 w-4"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </a>
+
+                <a
+                  href="#contact"
+                  class="inline-flex items-center justify-center gap-2 h-10 rounded-lg px-8 text-base font-medium glow-box w-full sm:w-auto"
+                  style="background: rgb(51, 204, 153); color: rgb(11, 14, 20)"
+                >
+                  Enquire
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="h-4 w-4"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: In Progress -->
+          <div class="glass-card rounded-xl deployment">
+            <div class="deployment-card-header">
+              <div class="deployment-dots">
+                <span class="deployment-dot green"></span>
+                <span class="deployment-dot yellow"></span>
+                <span class="deployment-dot blue"></span>
+              </div>
+              <span class="deployment-status">IN PROGRESS</span>
+            </div>
+
+            <div class="deployment-badge in-progress">
+              <span class="deployment-badge-icon">🔄</span>
+              <span class="deployment-badge-text in-progress">IN PROGRESS</span>
+            </div>
+
+            <div class="deployment-content">
+              <h3 class="deployment-title font-heading">
+                Dynamic QR Property Solution
+              </h3>
+              <p class="deployment-description">
+                Managed QR codes for listings & signage — update links anytime.
+              </p>
+
+              <div class="deployment-buttons">
+                <a
+                  href="#contact"
+                  class="inline-flex items-center justify-center gap-2 h-10 rounded-lg px-8 text-base font-medium glow-box w-full sm:w-auto"
+                  style="background: rgb(51, 204, 153); color: rgb(11, 14, 20)"
+                >
+                  Enquire
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="h-4 w-4"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Concept -->
+          <div class="glass-card rounded-xl deployment">
+            <div class="deployment-card-header">
+              <div class="deployment-dots">
+                <span class="deployment-dot green"></span>
+                <span class="deployment-dot yellow"></span>
+                <span class="deployment-dot blue"></span>
+              </div>
+              <span class="deployment-status">CONCEPT</span>
+            </div>
+
+            <div class="deployment-badge concept">
+              <span class="deployment-badge-icon">⭐</span>
+              <span class="deployment-badge-text concept">PLANNED</span>
+            </div>
+
+            <div class="deployment-content">
+              <h3 class="deployment-title font-heading">
+                Business Scalability System
+              </h3>
+              <p class="deployment-description">
+                Enquiries → pipeline → CRM → automation → reporting.
+              </p>
+
+              <div class="deployment-buttons">
+                <a
+                  href="#contact"
+                  class="inline-flex items-center justify-center gap-2 h-10 rounded-lg px-8 text-base font-medium glow-box w-full sm:w-auto"
+                  style="background: rgb(51, 204, 153); color: rgb(11, 14, 20)"
+                >
+                  Enquire
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="h-4 w-4"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Framework Section -->
+    <section
+      id="framework"
+      class="py-16 sm:py-24 lg:py-28 border-t"
+      style="border-color: rgba(37, 44, 55, 0.5)"
+    >
+      <div
+        class="container mx-auto px-4 sm:px-6 lg:px-8"
+        style="max-width: 1280px"
+      >
+        <p
+          class="text-xs font-medium uppercase tracking-widest mb-3"
+          style="color: rgb(51, 204, 153)"
+        >
+          How We Work
+        </p>
+        <h2
+          class="font-heading text-2xl font-bold sm:text-3xl lg:text-4xl"
+          style="color: rgb(224, 230, 235)"
+        >
+          Deployment <span class="text-gradient">Framework</span>
+        </h2>
+
+        <div class="mt-10 sm:mt-12 grid gap-6 sm:gap-8 sm:grid-cols-3">
+          <div class="glass-card rounded-xl p-5 sm:p-6">
+            <span
+              class="text-gradient font-heading text-4xl sm:text-5xl font-bold leading-none"
+              style="color: rgba(51, 204, 153, 0.15)"
+              >01</span
+            >
+            <h3
+              class="mt-3 font-heading text-lg sm:text-xl font-semibold"
+              style="color: rgb(224, 230, 235)"
+            >
+              Audit
+            </h3>
+            <p
+              class="mt-2 text-sm leading-relaxed"
+              style="color: rgb(123, 137, 157)"
+            >
+              We assess your current infrastructure, tools, and operational
+              flow.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl p-5 sm:p-6">
+            <span
+              class="text-gradient font-heading text-4xl sm:text-5xl font-bold leading-none"
+              >02</span
+            >
+            <h3
+              class="mt-3 font-heading text-lg sm:text-xl font-semibold"
+              style="color: rgb(224, 230, 235)"
+            >
+              Architect
+            </h3>
+            <p
+              class="mt-2 text-sm leading-relaxed"
+              style="color: rgb(123, 137, 157)"
+            >
+              We design a structured system aligned with growth and efficiency.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl p-5 sm:p-6">
+            <span
+              class="text-gradient font-heading text-4xl sm:text-5xl font-bold leading-none"
+              >03</span
+            >
+            <h3
+              class="mt-3 font-heading text-lg sm:text-xl font-semibold"
+              style="color: rgb(224, 230, 235)"
+            >
+              Deploy
+            </h3>
+            <p
+              class="mt-2 text-sm leading-relaxed"
+              style="color: rgb(123, 137, 157)"
+            >
+              We implement, integrate, and optimise for performance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why It Matters Section -->
+    <section
+      class="py-16 sm:py-24 lg:py-28 border-t"
+      style="border-color: rgba(37, 44, 55, 0.5)"
+    >
+      <div
+        class="container mx-auto px-4 sm:px-6 lg:px-8"
+        style="max-width: 1280px"
+      >
+        <p
+          class="text-xs font-medium uppercase tracking-widest mb-3"
+          style="color: rgb(51, 204, 153)"
+        >
+          Why It Matters
+        </p>
+        <h2
+          class="font-heading text-2xl font-bold sm:text-3xl lg:text-4xl"
+          style="color: rgb(224, 230, 235)"
+        >
+          Why Structured Systems <span class="text-gradient">Matter</span>
+        </h2>
+        <p
+          class="mt-5 max-w-2xl text-sm sm:text-base leading-relaxed"
+          style="color: rgb(123, 137, 157)"
+        >
+          Most businesses operate in tool fragmentation. Structured
+          infrastructure creates clarity, control, and scalability — turning
+          disconnected workflows into a unified operational system.
+        </p>
+
+        <div class="mt-10 grid gap-5 sm:grid-cols-3">
+          <div class="glass-card rounded-xl p-5 sm:p-6">
+            <div
+              class="flex h-10 w-10 items-center justify-center rounded-lg mb-4"
+              style="
+                background: rgba(51, 204, 153, 0.1);
+                color: rgb(51, 204, 153);
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-5 w-5"
+              >
+                <path
+                  d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"
+                ></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <h3
+              class="font-heading text-base sm:text-lg font-semibold"
+              style="color: rgb(224, 230, 235)"
+            >
+              Clarity
+            </h3>
+            <p
+              class="mt-1.5 text-sm leading-relaxed"
+              style="color: rgb(123, 137, 157)"
+            >
+              Understand every moving part of your operation.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl p-5 sm:p-6">
+            <div
+              class="flex h-10 w-10 items-center justify-center rounded-lg mb-4"
+              style="
+                background: rgba(51, 204, 153, 0.1);
+                color: rgb(51, 204, 153);
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-5 w-5"
+              >
+                <path
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                ></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+            </div>
+            <h3
+              class="font-heading text-base sm:text-lg font-semibold"
+              style="color: rgb(224, 230, 235)"
+            >
+              Control
+            </h3>
+            <p
+              class="mt-1.5 text-sm leading-relaxed"
+              style="color: rgb(123, 137, 157)"
+            >
+              Own your systems instead of renting patchwork tools.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl p-5 sm:p-6">
+            <div
+              class="flex h-10 w-10 items-center justify-center rounded-lg mb-4"
+              style="
+                background: rgba(51, 204, 153, 0.1);
+                color: rgb(51, 204, 153);
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-5 w-5"
+              >
+                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                <polyline points="16 7 22 7 22 13"></polyline>
+              </svg>
+            </div>
+            <h3
+              class="font-heading text-base sm:text-lg font-semibold"
+              style="color: rgb(224, 230, 235)"
+            >
+              Scalability
+            </h3>
+            <p
+              class="mt-1.5 text-sm leading-relaxed"
+              style="color: rgb(123, 137, 157)"
+            >
+              Grow without rebuilding from scratch.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-16 sm:py-24 lg:py-28 border-t"
+      style="border-color: rgba(37, 44, 55, 0.5)"
+    >
+      <div
+        class="container mx-auto px-4 sm:px-6 lg:px-8"
+        style="max-width: 1280px"
+      >
+        <div class="grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <span
+              class="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium mb-4"
+              style="
+                border-color: rgb(37, 44, 55);
+                background: rgba(29, 34, 43, 0.5);
+                color: rgb(123, 137, 157);
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-3 w-3"
+              >
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              Contact
+            </span>
+            <h2
+              class="font-heading text-2xl font-bold sm:text-3xl lg:text-4xl"
+              style="color: rgb(224, 230, 235)"
+            >
+              Initiate <span class="text-gradient">Consultation</span>
+            </h2>
+            <p
+              class="mt-4 text-sm sm:text-base leading-relaxed max-w-md"
+              style="color: rgb(123, 137, 157)"
+            >
+              Briefly describe your operational challenge. We will respond with
+              a structured next step.
+            </p>
+
+            <form
+              action="https://formspree.io/f/mnjbdeov"
+              method="POST"
+              id="contact-form"
+              class="mt-8 space-y-4"
+            >
+              <div class="grid gap-4 sm:grid-cols-2">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Name"
+                  required
+                  class="w-full rounded-lg border px-4 py-3 text-sm transition-all focus:outline-none"
+                  style="
+                    border-color: rgb(37, 44, 55);
+                    background: rgba(29, 34, 43, 0.5);
+                    color: rgb(224, 230, 235);
+                  "
+                />
+                <input
+                  type="text"
+                  name="company"
+                  id="company"
+                  placeholder="Company"
+                  class="w-full rounded-lg border px-4 py-3 text-sm transition-all focus:outline-none"
+                  style="
+                    border-color: rgb(37, 44, 55);
+                    background: rgba(29, 34, 43, 0.5);
+                    color: rgb(224, 230, 235);
+                  "
+                />
+              </div>
+              <input
+                type="email"
+                name="_replyto"
+                id="email"
+                placeholder="Email"
+                required
+                class="w-full rounded-lg border px-4 py-3 text-sm transition-all focus:outline-none"
+                style="
+                  border-color: rgb(37, 44, 55);
+                  background: rgba(29, 34, 43, 0.5);
+                  color: rgb(224, 230, 235);
+                "
+              />
+              <textarea
+                name="description"
+                id="description"
+                placeholder="Brief Description"
+                rows="4"
+                required
+                class="w-full rounded-lg border px-4 py-3 text-sm resize-none transition-all focus:outline-none"
+                style="
+                  border-color: rgb(37, 44, 55);
+                  background: rgba(29, 34, 43, 0.5);
+                  color: rgb(224, 230, 235);
+                "
+              ></textarea>
+
+              <!-- Hidden fields for Formspree -->
+              <input
+                type="hidden"
+                name="_subject"
+                value="New contact form submission!"
+              />
+              <input type="text" name="_gotcha" style="display: none" />
+
+              <button
+                type="submit"
+                id="submit-btn"
+                class="inline-flex items-center justify-center gap-2 h-10 rounded-lg px-8 text-base font-medium w-full sm:w-auto glow-box"
+                style="background: rgb(51, 204, 153); color: rgb(11, 14, 20)"
+              >
+                <span id="btn-text">Submit</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-4 w-4"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </button>
+
+              <!-- Status message -->
+              <div
+                id="form-status"
+                class="hidden mt-4 p-4 rounded-lg text-sm"
+              ></div>
+            </form>
+          </div>
+
+          <div class="flex flex-col justify-center gap-4">
+            <p
+              class="text-xs font-medium uppercase tracking-widest mb-2"
+              style="color: rgb(51, 204, 153)"
+            >
+              Or reach out directly
+            </p>
+
+            <!--For Email -->
+            <a
+              href="#"
+              onclick="openEmail(event)"
+              id="email-link"
+              class="glass-card flex items-center gap-4 rounded-xl p-5 hover:scale-[1.02] transition-transform duration-200"
+              style="cursor: pointer"
+            >
+              <div
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg"
+                style="background: rgb(37, 44, 55)"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5"
+                  style="color: rgb(224, 230, 235)"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <h3
+                  class="font-heading text-sm sm:text-base font-semibold"
+                  style="color: rgb(224, 230, 235)"
+                >
+                  Email
+                </h3>
+                <p class="text-sm" style="color: rgb(123, 137, 157)">
+                  <span
+                    class="__cf_email__"
+                    data-cfemail="98f5fceafde2eff9f6edf4f0f9e9edfdaaaaaba8d8fff5f9f1f4b6fbf7f5"
+                    >Contact@solutionsbyab.com</span
+                  >
+                </p>
+                <p
+                  class="text-xs mt-0.5"
+                  style="color: rgba(123, 137, 157, 0.6)"
+                >
+                  Tap to compose
+                </p>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4 shrink-0"
+                style="color: rgb(123, 137, 157)"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+
+            <!--For whatsapp -->
+            <a
+              href="https://wa.me/4407904324646"
+              target="_blank"
+              class="glass-card flex items-center gap-4 rounded-xl p-5"
+            >
+              <div
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg"
+                style="background: rgba(51, 204, 153, 0.1)"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5"
+                  style="color: rgb(224, 230, 235)"
+                >
+                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                </svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <h3
+                  class="font-heading text-sm sm:text-base font-semibold"
+                  style="color: rgb(224, 230, 235)"
+                >
+                  WhatsApp
+                </h3>
+                <p class="text-sm" style="color: rgb(123, 137, 157)">
+                  Message for fastest reply
+                </p>
+                <p
+                  class="text-xs mt-0.5"
+                  style="color: rgba(123, 137, 157, 0.6)"
+                >
+                  Tap to open chat
+                </p>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4 shrink-0"
+                style="color: rgb(123, 137, 157)"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="border-t py-8 sm:py-10"
+      style="border-color: rgba(37, 44, 55, 0.5)"
+    >
+      <div
+        class="container mx-auto flex flex-col items-center gap-3 px-4 sm:px-6 lg:px-8 text-center"
+        style="max-width: 1280px"
+      >
+        <a href="#nav" class="shrink-0">
+          <div class="flex flex-col">
+            <span class="text-xl font-bold" style="color: rgb(224, 230, 235)"
+              >Solutions by <span class="text-gradient">
+
+                <img
+                  src="./images/logo.png"
+                  alt="AB Logo"
+                  class="inline-block h-[30px] w-[34px] -mt-1"/>
+              </span></span
+            >
+            <span class="text-[12px] font-bold text-gradient" style="color: rgb(224, 230, 235)"
+              >Technology. Tailored</span></span
+            >
+          </div>
+        </a>
+        <p class="text-xs" style="color: rgba(123, 137, 157, 0.4)">
+          © 2026 Solutions by AB. All rights reserved.
+        </p>
+      </div>
+
+    </footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
