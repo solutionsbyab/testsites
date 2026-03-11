@@ -174,7 +174,6 @@ const typeSpeed = 50;
 const deleteSpeed = 30;
 const pauseAfterType = 5000;
 const pauseAfterDelete = 400;
-const cursorHTML = ‘<span class="tw-cursor"></span>’;
 
 let currentPhrase = 0;
 let currentText = “”;
@@ -183,15 +182,20 @@ let timer = null;
 // Set measure to longest phrase to prevent layout shifts
 if (measure) {
 let longest = “”;
-phrases.forEach((p) => { if (p.length > longest.length) longest = p; });
+phrases.forEach(function(p) { if (p.length > longest.length) longest = p; });
 measure.textContent = longest;
 }
 
 function render() {
 if (!el) return;
-// Escape HTML entities in the text, then append cursor
-const safe = currentText.replace(/&/g,”&”).replace(/</g,”<”).replace(/>/g,”>”);
-el.innerHTML = safe + cursorHTML;
+// Clear element
+while (el.firstChild) el.removeChild(el.firstChild);
+// Add text node
+el.appendChild(document.createTextNode(currentText));
+// Add cursor span
+var cursorSpan = document.createElement(“span”);
+cursorSpan.className = “tw-cursor”;
+el.appendChild(cursorSpan);
 }
 
 function typeText(text, charIndex, callback) {
@@ -199,7 +203,7 @@ if (!el) return;
 if (charIndex <= text.length) {
 currentText = text.slice(0, charIndex);
 render();
-timer = setTimeout(() => typeText(text, charIndex + 1, callback), typeSpeed);
+timer = setTimeout(function() { typeText(text, charIndex + 1, callback); }, typeSpeed);
 } else {
 if (callback) callback();
 }
@@ -210,17 +214,18 @@ if (!el) return;
 if (currentText.length > 0) {
 currentText = currentText.slice(0, -1);
 render();
-timer = setTimeout(() => deleteText(callback), deleteSpeed);
+timer = setTimeout(function() { deleteText(callback); }, deleteSpeed);
 } else {
+render();
 if (callback) callback();
 }
 }
 
 function runCycle() {
-const phrase = phrases[currentPhrase];
-typeText(phrase, 0, () => {
-timer = setTimeout(() => {
-deleteText(() => {
+var phrase = phrases[currentPhrase];
+typeText(phrase, 0, function() {
+timer = setTimeout(function() {
+deleteText(function() {
 currentPhrase = (currentPhrase + 1) % phrases.length;
 timer = setTimeout(runCycle, pauseAfterDelete);
 });
@@ -236,24 +241,24 @@ function startCycle() {
 stopCycle();
 currentPhrase = 0;
 currentText = “”;
-if (el) el.innerHTML = cursorHTML;
+render();
 runCycle();
 }
 
 window.addEventListener(“load”, startCycle);
 
 if (el) {
-const section = el.closest(“section”);
+var section = el.closest(“section”);
 if (section && “IntersectionObserver” in window) {
-const obs = new IntersectionObserver(
-(entries) => {
-entries.forEach((entry) => {
+var obs = new IntersectionObserver(
+function(entries) {
+entries.forEach(function(entry) {
 if (entry.isIntersecting) {
 startCycle();
 }
 });
 },
-{ threshold: 0.5 },
+{ threshold: 0.5 }
 );
 obs.observe(section);
 }
