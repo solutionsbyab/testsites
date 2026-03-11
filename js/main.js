@@ -168,15 +168,16 @@ const phrases = [
 ];
 
 const el = document.getElementById(“typewriter”);
-const cursor = document.getElementById(“typewriter-cursor”);
 const measure = document.getElementById(“typewriter-measure”);
 
-const typeSpeed = 50;      // ms per character typing
-const deleteSpeed = 30;    // ms per character deleting
-const pauseAfterType = 5000; // 5s pause after full phrase
-const pauseAfterDelete = 400; // short pause before typing next
+const typeSpeed = 50;
+const deleteSpeed = 30;
+const pauseAfterType = 5000;
+const pauseAfterDelete = 400;
+const cursorHTML = ‘<span class="tw-cursor"></span>’;
 
 let currentPhrase = 0;
+let currentText = “”;
 let timer = null;
 
 // Set measure to longest phrase to prevent layout shifts
@@ -186,10 +187,18 @@ phrases.forEach((p) => { if (p.length > longest.length) longest = p; });
 measure.textContent = longest;
 }
 
+function render() {
+if (!el) return;
+// Escape HTML entities in the text, then append cursor
+const safe = currentText.replace(/&/g,”&”).replace(/</g,”<”).replace(/>/g,”>”);
+el.innerHTML = safe + cursorHTML;
+}
+
 function typeText(text, charIndex, callback) {
 if (!el) return;
 if (charIndex <= text.length) {
-el.textContent = text.slice(0, charIndex);
+currentText = text.slice(0, charIndex);
+render();
 timer = setTimeout(() => typeText(text, charIndex + 1, callback), typeSpeed);
 } else {
 if (callback) callback();
@@ -198,9 +207,9 @@ if (callback) callback();
 
 function deleteText(callback) {
 if (!el) return;
-const current = el.textContent;
-if (current.length > 0) {
-el.textContent = current.slice(0, -1);
+if (currentText.length > 0) {
+currentText = currentText.slice(0, -1);
+render();
 timer = setTimeout(() => deleteText(callback), deleteSpeed);
 } else {
 if (callback) callback();
@@ -209,14 +218,10 @@ if (callback) callback();
 
 function runCycle() {
 const phrase = phrases[currentPhrase];
-// Type out the phrase
 typeText(phrase, 0, () => {
-// Pause, then delete
 timer = setTimeout(() => {
 deleteText(() => {
-// Move to next phrase
 currentPhrase = (currentPhrase + 1) % phrases.length;
-// Short pause before typing next
 timer = setTimeout(runCycle, pauseAfterDelete);
 });
 }, pauseAfterType);
@@ -230,14 +235,13 @@ if (timer) { clearTimeout(timer); timer = null; }
 function startCycle() {
 stopCycle();
 currentPhrase = 0;
-if (el) el.textContent = “”;
+currentText = “”;
+if (el) el.innerHTML = cursorHTML;
 runCycle();
 }
 
-// Initial run on load
 window.addEventListener(“load”, startCycle);
 
-// Restart whenever the hero section enters view
 if (el) {
 const section = el.closest(“section”);
 if (section && “IntersectionObserver” in window) {
